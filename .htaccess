@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# ----------------------------------------------------------------------
+# Basic認証
+# ----------------------------------------------------------------------
+# AuthUserFile /home/users/1/main.jp-73769f2d03a55ee5/web/.htpasswd
+# AuthGroupFile /dev/null
+# AuthName "ユーザー認証"
+# AuthType Basic
+# require valid-user
