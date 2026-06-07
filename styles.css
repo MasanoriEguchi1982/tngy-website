@@ -11,9 +11,7 @@
 }
 
 /* ページ全体の横揺れ・横スクロールを防止 */
-html {
-  overflow-x: hidden;
-}
+/* htmlのoverflowを解除（stickyを効かせるため） */
 
 body {
   font-family: 'Noto Serif JP', serif;
@@ -22,7 +20,7 @@ body {
   background-color: var(--bg-color);
   letter-spacing: 0.05em;
   padding-bottom: 70px;
-  overflow-x: hidden; /* htmlとbodyの両方に設定するのが確実 */
+  overflow-x: clip; /* 代わりにbodyでハミ出しをカット */
 }
 
 h1, h2, h3, h4, h5, h6, .serif {
@@ -145,7 +143,8 @@ h1, h2, h3, h4, h5, h6, .serif {
   border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1030; /* 他の要素より上に表示 */
+  width: 100%;
 }
 .header-wrapper nav a {
   font-size: 0.9rem; /* 文字サイズを少し小さくする */
