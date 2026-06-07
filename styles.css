@@ -10,6 +10,11 @@
   --border-color: #e0d8d0;
 }
 
+/* ページ全体の横揺れ・横スクロールを防止 */
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Noto Serif JP', serif;
   font-weight: 400;
@@ -17,6 +22,7 @@ body {
   background-color: var(--bg-color);
   letter-spacing: 0.05em;
   padding-bottom: 70px;
+  overflow-x: hidden; /* htmlとbodyの両方に設定するのが確実 */
 }
 
 h1, h2, h3, h4, h5, h6, .serif {
