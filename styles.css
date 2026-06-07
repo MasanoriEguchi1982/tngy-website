@@ -221,6 +221,45 @@ h1, h2, h3, h4, h5, h6, .serif {
 }
 
 /* =========================================
+   Problem & Solution Section
+========================================= */
+.problem-section {
+  background-color: #f4f2ef;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+.concern-card {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  height: 100%;
+}
+.concern-card i {
+  color: #a0938a;
+}
+.solution-box {
+  background: linear-gradient(135deg, #fdfbf7, #fbf6f0);
+  border: 2px dashed var(--accent-color);
+  border-radius: 12px;
+  padding: 2.5rem;
+  text-align: center;
+}
+.arrow-down {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  text-align: center;
+  margin: 2rem 0;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-15px); }
+  60% { transform: translateY(-5px); }
+}
+
+/* =========================================
    Flow Section
 ========================================= */
 .flow-step {
@@ -275,10 +314,12 @@ h1, h2, h3, h4, h5, h6, .serif {
   padding: 1.5rem 1rem;
   height: 100%;
   transition: all 0.3s;
+  cursor: pointer;
 }
 .item-card:hover {
   border-color: var(--accent-color);
   transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
 .item-card img {
   width: 120px; /* PC表示での基準サイズ */
@@ -298,6 +339,19 @@ h1, h2, h3, h4, h5, h6, .serif {
 @media (max-width: 767px) {
   .item-col:nth-child(n+10) { display: none; }
   .item-col.show { display: block; }
+}
+
+/* その他の買取品目エリア */
+.other-items-box {
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+}
+.other-items-box h4 {
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
 }
 
 /* =========================================
@@ -422,4 +476,43 @@ h1, h2, h3, h4, h5, h6, .serif {
 #faq .nav-tabs .nav-link {
   padding: 0.5rem 1rem;
   font-size: 0.9rem; /* スマホ用に少し文字を小さく */
+}
+
+/* =========================================
+   Item Modal
+========================================= */
+.modal-content {
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+}
+.modal-header {
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 1.5rem;
+}
+.modal-title {
+  font-family: 'Noto Serif JP', serif;
+  color: var(--primary-color);
+}
+.modal-body {
+  padding: 2rem 1.5rem;
+}
+.modal-point-list {
+  list-style: none;
+  padding-left: 0;
+}
+.modal-point-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.modal-point-list li::before {
+  content: '\f00c'; /* Font Awesome check icon */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  color: var(--accent-color);
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
 }
