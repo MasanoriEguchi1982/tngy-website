@@ -104,10 +104,10 @@
       },
       {
         "@type": "Question",
-        "name": "こんなものでも見てもらえますか？",
+        "name": "来店する際、事前の予約は必要ですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "「こんなの売れないかな？」と思うような古い物や、他店で断られてしまったお品物も、意外とお値段が付くことがございます。当店では幅広い品目を取り扱っておりますので、処分してしまう前にぜひ一度お見せください。"
+          "text": "いいえ、事前の予約は不要です。営業時間内（09:30〜17:00）であれば、いつでもご都合の良いときにお越しください。当店は辻堂駅前の便利な場所にございますので、お買い物やお出かけのついでに、どうぞお気軽にお立ち寄りください。"
         }
       },
       {
@@ -115,7 +115,7 @@
         "name": "古かったり汚れていても大丈夫ですか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "大丈夫です！キズがある、汚れている、壊れているといった状態に関わらず、一点ずつ丁寧に査定いたします。変色した金製品、ちぎれたネックレス、古いブランドバッグなども喜んで拝見いたします。"
+          "text": "大張夫です！キズがある、汚れている、壊れているといった状態に関わらず、一点ずつ丁寧に査定いたします。変色した金製品、ちぎれたネックレス、古いブランドバッグなども喜んで拝見いたします。"
         }
       },
       {
@@ -461,184 +461,103 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section id="faq" class="section-padding bg-transparent">
       <div class="container-custom">
         <div class="section-title-wrapper"><h2 class="section-title">よくある質問</h2></div>
-        <div class="accordion mt-2" id="faqAccordion">
-          
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-heading-1">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1" aria-expanded="false" aria-controls="faq-collapse-1">
-                Q. 査定だけでも大丈夫ですか？費用はかかりますか？
-              </button>
-            </h3>
-            <div id="faq-collapse-1" class="accordion-collapse collapse" aria-labelledby="faq-heading-1" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">A. はい、査定だけでも大歓迎です！ご相談や査定に費用は一切かかりません（完全無料です）。「これって価値あるのかな？」と金額を知りたいだけの場合もお気軽にお持ちください。初めての方にも、女性査定士が1点ずつ丁寧にご説明いたします。</div>
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="faqTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="tab-usage-btn" data-bs-toggle="tab" data-bs-target="#tab-usage" type="button" role="tab" aria-controls="tab-usage" aria-selected="true">ご利用方法・費用</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab-items-btn" data-bs-toggle="tab" data-bs-target="#tab-items" type="button" role="tab" aria-controls="tab-items" aria-selected="false">お品物の状態・種類</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="tab-cleanup-btn" data-bs-toggle="tab" data-bs-target="#tab-cleanup" type="button" role="tab" aria-controls="tab-cleanup" aria-selected="false">お片付け・生前遺品整理</button>
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content" id="faqTabContent">
+          <!-- Tab 1: ご利用方法・費用 -->
+          <div class="tab-pane fade show active" id="tab-usage" role="tabpanel" aria-labelledby="tab-usage-btn">
+            <div class="accordion" id="faqAccordionUsage">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-heading-1"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1" aria-expanded="false" aria-controls="faq-collapse-1">Q1. 査定だけでも大丈夫ですか？費用はかかりますか？</button></h3>
+                <div id="faq-collapse-1" class="accordion-collapse collapse" aria-labelledby="faq-heading-1" data-bs-parent="#faqAccordionUsage"><div class="accordion-body">A. はい、査定だけでも大歓迎です！ご相談や査定に費用は一切かかりません（完全無料です）。「これって価値あるのかな？」と金額を知りたいだけの場合もお気軽にお持ちください。初めての方にも、女性査定士が1点ずつ丁寧にご説明いたします。</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-heading-2"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2" aria-expanded="false" aria-controls="faq-collapse-2">Q2. 売るかまだ決めていないのですが…</button></h3>
+                <div id="faq-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-heading-2" data-bs-parent="#faqAccordionUsage"><div class="accordion-body">A. 問題ありません。ご提示した査定額をご覧いただいてから、売却されるかどうかゆっくりご検討ください。その場で決めずに、一度ご自宅に持ち帰ってご家族とご相談されても大丈夫です。</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-heading-3"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-3" aria-expanded="false" aria-controls="faq-collapse-3">Q3. 査定したら断りづらくないですか？</button></h3>
+                <div id="faq-collapse-3" class="accordion-collapse collapse" aria-labelledby="faq-heading-3" data-bs-parent="#faqAccordionUsage"><div class="accordion-body">A. ご安心ください。当店では無理なお声がけや、強引な引き止めは一切行っておりません。査定額にご納得いただけない場合は遠慮なくお断りいただけます。お客様のお気持ちを最優先に営業しております。</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-heading-4"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-4" aria-expanded="false" aria-controls="faq-collapse-4">Q4. 初めてで少し不安です…</button></h3>
+                <div id="faq-collapse-4" class="accordion-collapse collapse" aria-labelledby="faq-heading-4" data-bs-parent="#faqAccordionUsage"><div class="accordion-body">A. 初めてのお客様にも安心してご利用いただけるよう、話しやすい雰囲気づくりと、分かりやすく丁寧なご説明を心掛けています。女性一人でも入りやすいお店ですので、どうぞ緊張なさらずにお気軽にお越しください。</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-heading-5"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-5" aria-expanded="false" aria-controls="faq-collapse-5">Q5. 来店する際、事前の予約は必要ですか？</button></h3>
+                <div id="faq-collapse-5" class="accordion-collapse collapse" aria-labelledby="faq-heading-5" data-bs-parent="#faqAccordionUsage"><div class="accordion-body">A. いいえ、事前の予約は不要です。営業時間内（09:30〜17:00）であれば、いつでもご都合の良いときにお越しください。当店は辻堂駅前の便利な場所にございますので、お買い物やお出かけのついでに、どうぞお気軽にお立ち寄りください。</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-heading-16"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-16" aria-expanded="false" aria-controls="faq-collapse-16">Q16. 駐車場はありますか？</button></h3>
+                <div id="faq-collapse-16" class="accordion-collapse collapse" aria-labelledby="faq-heading-16" data-bs-parent="#faqAccordionUsage"><div class="accordion-body">A. 当店専用の駐車場はございませんが、お買取が成立したお客様には周辺パーキングの駐車場代サービスを行っております。辻堂周辺だけでなく、藤沢市・茅ヶ崎市など湘南エリアからお車でお越しの際も、安心してお近くのコインパーキングをご利用ください。詳しくはお気軽にスタッフまでお尋ねください。</div></div>
+              </div>
             </div>
           </div>
 
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-heading-2">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2" aria-expanded="false" aria-controls="faq-collapse-2">
-                Q. 売るかまだ決めていないのですが…
-              </button>
-            </h3>
-            <div id="faq-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-heading-2" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">A. 問題ありません。ご提示した査定額をご覧いただいてから、売却されるかどうかゆっくりご検討ください。その場で決めずに、一度ご自宅に持ち帰ってご家族とご相談されても大丈夫です。</div>
+          <!-- Tab 2: お品物の状態・種類 -->
+          <div class="tab-pane fade" id="tab-items" role="tabpanel" aria-labelledby="tab-items-btn">
+            <div class="accordion" id="faqAccordionItems">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-heading-6"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-6" aria-expanded="false" aria-controls="faq-collapse-6">Q6. 古かったり汚れていても大丈夫ですか？</button></h3>
+                <div id="faq-collapse-6" class="accordion-collapse collapse" aria-labelledby="faq-heading-6" data-bs-parent="#faqAccordionItems"><div class="accordion-body">A. 大張夫です！キズがある、汚れている、壊れているといった状態に関わらず、一点ずつ丁寧に査定いたします。変色した金製品、ちぎれたネックレス、古いブランドバッグなども喜んで拝見いたします。</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-heading-7"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-7" aria-expanded="false" aria-controls="faq-collapse-7">Q7. 箱や保証書が無くても大丈夫ですか？</button></h3>
+                <div id="faq-collapse-7" class="accordion-collapse collapse" aria-labelledby="faq-heading-7" data-bs-parent="#faqAccordionItems"><div class="accordion-body">A. はい、付属品が何もなくて本体のみの状態でも査定・お買取が可能です。もちろん、箱や保証書、鑑定書、ギャランティカードなどが残っている場合は、一緒にお持ちいただくとさらに高価買取に繋がりやすくなります。</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-heading-8"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-8" aria-expanded="false" aria-controls="faq-collapse-8">Q8. 他店で断られたものでも見てもらえますか？</button></h3>
+                <div id="faq-collapse-8" class="accordion-collapse collapse" aria-labelledby="faq-heading-8" data-bs-parent="#faqAccordionItems"><div class="accordion-body">A. はい、ぜひ一度お持ちください。当店独自の多彩な販売ルートや専門の鑑定技術により、他店様で買取対象外になってしまったお品物であっても、お値段をご案内できる場合がございます。</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-heading-9"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-9" aria-expanded="false" aria-controls="faq-collapse-9">Q9. 値段が付かなかったら恥ずかしいです…</button></h3>
+                <div id="faq-collapse-9" class="accordion-collapse collapse" aria-labelledby="faq-heading-9" data-bs-parent="#faqAccordionItems"><div class="accordion-body">A. 全く気になさらないでください！査定のみをご希望のお客様や、結果としてお値段が付かなかったお客様も多くいらっしゃいます。どのようなお品物でも、お持ち込みいただいたこと自体に感謝して丁寧に拝見いたします。</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-heading-10"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-10" aria-expanded="false" aria-controls="faq-collapse-10">Q10. 少ない量でも行っていいですか？</button></h3>
+                <div id="faq-collapse-10" class="accordion-collapse collapse" aria-labelledby="faq-heading-10" data-bs-parent="#faqAccordionItems"><div class="accordion-body">A. もちろんです。指輪1点、切手1枚、香水1点からでも喜んで査定いたします。点数が少ないからといって査定額が下がるようなことはございませんので、どうぞお気軽にお越しください。</div></div>
+              </div>
             </div>
           </div>
 
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-heading-3">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-3" aria-expanded="false" aria-controls="faq-collapse-3">
-                Q. 査定したら断りづらくないですか？
-              </button>
-            </h3>
-            <div id="faq-collapse-3" class="accordion-collapse collapse" aria-labelledby="faq-heading-3" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">A. ご安心ください。当店では無理なお声がけや、強引な引き止めは一切行っておりません。査定額にご納得いただけない場合は遠慮なくお断りいただけます。お客様のお気持ちを最優先に営業しております。</div>
+          <!-- Tab 3: お片付け・生前遺品整理 -->
+          <div class="tab-pane fade" id="tab-cleanup" role="tabpanel" aria-labelledby="tab-cleanup-btn">
+            <div class="accordion" id="faqAccordionCleanup">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-heading-11"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-11" aria-expanded="false" aria-controls="faq-collapse-11">Q11. 家の片付けで出てきたものでも大丈夫？</button></h3>
+                <div id="faq-collapse-11" class="accordion-collapse collapse" aria-labelledby="faq-heading-11" data-bs-parent="#faqAccordionCleanup"><div class="accordion-body">A. はい、お任せください。ご自宅の断捨離、お引越し、実家の片付けや空き家整理の際に出てきた古い物や遺品なども、丁寧に仕分け・無料査定いたします。価値がわからないものもそのままお持ちください。</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-heading-12"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-12" aria-expanded="false" aria-controls="faq-collapse-12">Q12. 遺品整理や生前整理の相談もできますか？</button></h3>
+                <div id="faq-collapse-12" class="accordion-collapse collapse" aria-labelledby="faq-heading-12" data-bs-parent="#faqAccordionCleanup"><div class="accordion-body">A. 大丈夫です。つなぐ屋では、遺品整理士の資格を持つ専門スタッフが、ご家族のお気持ちに寄り添いながらお品物の整理・買取を承ります。大切な想い出をゴミにせず、次の方へ丁寧につなぐお手伝いをいたします。</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-heading-13"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-13" aria-expanded="false" aria-controls="faq-collapse-13">Q13. 女性一人でも入りやすいですか？</button></h3>
+                <div id="faq-collapse-13" class="accordion-collapse collapse" aria-labelledby="faq-heading-13" data-bs-parent="#faqAccordionCleanup"><div class="accordion-body">A. はい！安心してご来店いただけるよう、明るく清潔感のある店内と、女性スタッフならではのよりそう接客を心掛けています。査定ブースのプライバシーにも配慮しておりますので、女性お一人でも安心してお立ち寄りください。</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-heading-14"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-14" aria-expanded="false" aria-controls="faq-collapse-14">Q14. 査定時間はどれくらいですか？</button></h3>
+                <div id="faq-collapse-14" class="accordion-collapse collapse" aria-labelledby="faq-heading-14" data-bs-parent="#faqAccordionCleanup"><div class="accordion-body">A. お品物の種類や点数によって異なりますが、一般的なお品物であれば数分から10分程度で即日査定いたします。できるだけお客様をお待たせしないよう、迅速かつ確実なご案内を心掛けています。</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faq-heading-15"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-15" aria-expanded="false" aria-controls="faq-collapse-15">Q15. 値段の理由も教えてもらえますか？</button></h3>
+                <div id="faq-collapse-15" class="accordion-collapse collapse" aria-labelledby="faq-heading-15" data-bs-parent="#faqAccordionCleanup"><div class="accordion-body">A. はい。当店ではお客様にご納得いただいてからお売りいただけるよう、なぜその査定金額になったのか、お品物の状態や現在の市場相場を踏まえて、分かりやすく丁寧にご説明いたします。</div></div>
+              </div>
             </div>
           </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-heading-4">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-4" aria-expanded="false" aria-controls="faq-collapse-4">
-                Q. 初めてで少し不安です…
-              </button>
-            </h3>
-            <div id="faq-collapse-4" class="accordion-collapse collapse" aria-labelledby="faq-heading-4" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">A. 初めてのお客様にも安心してご利用いただけるよう、話しやすい雰囲気づくりと、分かりやすく丁寧なご説明を心掛けています。女性一人でも入りやすいお店ですので、どうぞ緊張なさらずにお気軽にお越しください。</div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-heading-5">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-5" aria-expanded="false" aria-controls="faq-collapse-5">
-                Q. こんなものでも見てもらえますか？
-              </button>
-            </h3>
-            <div id="faq-collapse-5" class="accordion-collapse collapse" aria-labelledby="faq-heading-5" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">A. 「こんなの売れないかな？」と思うような古い物や、他店で断られてしまったお品物も、意外とお値段が付くことがございます。当店では幅広い品目を取り扱っておりますので、処分してしまう前にぜひ一度お見せください。</div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-heading-6">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-6" aria-expanded="false" aria-controls="faq-collapse-6">
-                Q. 古かったり汚れていても大丈夫ですか？
-              </button>
-            </h3>
-            <div id="faq-collapse-6" class="accordion-collapse collapse" aria-labelledby="faq-heading-6" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">A. 大丈夫です！キズがある、汚れている、壊れているといった状態に関わらず、一点ずつ丁寧に査定いたします。変色した金製品、ちぎれたネックレス、古いブランドバッグなども喜んで拝見いたします。</div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-heading-7">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-7" aria-expanded="false" aria-controls="faq-collapse-7">
-                Q. 箱や保証書が無くても大丈夫ですか？
-              </button>
-            </h3>
-            <div id="faq-collapse-7" class="accordion-collapse collapse" aria-labelledby="faq-heading-7" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">A. はい、付属品が何もなくて本体のみの状態でも査定・お買取が可能です。もちろん、箱や保証書、鑑定書、ギャランティカードなどが残っている場合は、一緒にお持ちいただくとさらに高価買取に繋がりやすくなります。</div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-heading-8">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-8" aria-expanded="false" aria-controls="faq-collapse-8">
-                Q. 他店で断られたものでも見てもらえますか？
-              </button>
-            </h3>
-            <div id="faq-collapse-8" class="accordion-collapse collapse" aria-labelledby="faq-heading-8" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">A. はい、ぜひ一度お持ちください。当店独自の多彩な販売ルートや専門の鑑定技術により、他店様で買取対象外になってしまったお品物であっても、お値段をご案内できる場合がございます。</div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-heading-9">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-9" aria-expanded="false" aria-controls="faq-collapse-9">
-                Q. 値段が付かなかったら恥ずかしいです…
-              </button>
-            </h3>
-            <div id="faq-collapse-9" class="accordion-collapse collapse" aria-labelledby="faq-heading-9" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">A. 全く気になさらないでください！査定のみをご希望のお客様や、結果としてお値段が付かなかったお客様も多くいらっしゃいます。どのようなお品物でも、お持ち込みいただいたこと自体に感謝して丁寧に拝見いたします。</div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-heading-10">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-10" aria-expanded="false" aria-controls="faq-collapse-10">
-                Q. 少ない量でも行っていいですか？
-              </button>
-            </h3>
-            <div id="faq-collapse-10" class="accordion-collapse collapse" aria-labelledby="faq-heading-10" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">A. もちろんです。指輪1点、切手1枚、香水1点からでも喜んで査定いたします。点数が少ないからといって査定額が下がるようなことはございませんので、どうぞお気軽にお越しください。</div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-heading-11">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-11" aria-expanded="false" aria-controls="faq-collapse-11">
-                Q. 家の片付けで出てきたものでも大丈夫？
-              </button>
-            </h3>
-            <div id="faq-collapse-11" class="accordion-collapse collapse" aria-labelledby="faq-heading-11" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">A. はい、お任せください。ご自宅の断捨離、お引越し、実家の片付けや空き家整理の際に出てきた古い物や遺品なども、丁寧に仕分け・無料査定いたします。価値がわからないものもそのままお持ちください。</div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-heading-12">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-12" aria-expanded="false" aria-controls="faq-collapse-12">
-                Q. 遺品整理や生前整理の相談もできますか？
-              </button>
-            </h3>
-            <div id="faq-collapse-12" class="accordion-collapse collapse" aria-labelledby="faq-heading-12" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">A. 大丈夫です。つなぐ屋では、遺品整理士の資格を持つ専門スタッフが、ご家族のお気持ちに寄り添いながらお品物の整理・買取を承ります。大切な想い出をゴミにせず、次の方へ丁寧につなぐお手伝いをいたします。</div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-heading-13">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-13" aria-expanded="false" aria-controls="faq-collapse-13">
-                Q. 女性一人でも入りやすいですか？
-              </button>
-            </h3>
-            <div id="faq-collapse-13" class="accordion-collapse collapse" aria-labelledby="faq-heading-13" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">A. はい！安心してご来店いただけるよう、明るく清潔感のある店内と、女性スタッフならではのよりそう接客を心掛けています。査定ブースのプライバシーにも配慮しておりますので、女性お一人でも安心してお立ち寄りください。</div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-heading-14">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-14" aria-expanded="false" aria-controls="faq-collapse-14">
-                Q. 査定時間はどれくらいですか？
-              </button>
-            </h3>
-            <div id="faq-collapse-14" class="accordion-collapse collapse" aria-labelledby="faq-heading-14" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">A. お品物の種類や点数によって異なりますが、一般的なお品物であれば数分から10分程度で即日査定いたします。できるだけお客様をお待たせしないよう、迅速かつ確実なご案内を心掛けています。</div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-heading-15">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-15" aria-expanded="false" aria-controls="faq-collapse-15">
-                Q. 値段の理由も教えてもらえますか？
-              </button>
-            </h3>
-            <div id="faq-collapse-15" class="accordion-collapse collapse" aria-labelledby="faq-heading-15" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">A. はい。当店ではお客様にご納得いただいてからお売りいただけるよう、なぜその査定金額になったのか、お品物の状態や現在の市場相場を踏まえて、分かりやすく丁寧にご説明いたします。</div>
-            </div>
-          </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faq-heading-16">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-16" aria-expanded="false" aria-controls="faq-collapse-16">
-                Q. 駐車場はありますか？
-              </button>
-            </h3>
-            <div id="faq-collapse-16" class="accordion-collapse collapse" aria-labelledby="faq-heading-16" data-bs-parent="#faqAccordion">
-              <div class="accordion-body">A. 当店専用の駐車場はございませんが、お買取が成立したお客様には周辺パーキングの駐車場代サービスを行っております。辻堂周辺だけでなく、藤沢市・茅ヶ崎市など湘南エリアからお車でお越しの際も、安心してお近くのコインパーキングをご利用ください。詳しくはお気軽にスタッフまでお尋ねください。</div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
