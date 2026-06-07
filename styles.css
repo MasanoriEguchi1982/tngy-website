@@ -333,44 +333,6 @@ h1, h2, h3, h4, h5, h6, .serif {
 .news-list {
   max-width: 100%;
 }
-.news-item {
-  display: flex;
-  align-items: baseline;
-  padding: 0.75rem 0;
-  border-bottom: 1px dashed var(--border-color);
-}
-.news-item:last-child {
-  border-bottom: none;
-}
-.news-date {
-  min-width: 110px;
-  font-size: 0.85rem;
-  color: #888;
-}
-.news-title {
-  font-size: 0.95rem;
-  color: var(--text-color);
-  text-decoration: none;
-  transition: color 0.2s;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.news-title:hover {
-  color: var(--accent-color);
-  text-decoration: underline;
-}
-@media (max-width: 767px) {
-  .news-item {
-    flex-direction: column;
-  }
-  .news-date {
-    margin-bottom: 0.25rem;
-  }
-  .news-title {
-    white-space: normal;
-  }
-}
 
 /* =========================================
    FAQ Accordion

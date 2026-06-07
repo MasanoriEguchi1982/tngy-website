@@ -20,35 +20,28 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => {
-        if (data.status === 'ok' && data.items.length > 0) {
-          feedContainer.innerHTML = '';
-          const items = data.items.slice(0, 3); // 最新3件を取得
-
-          items.forEach(item => {
-            const pubDate = new Date(item.pubDate);
-            const dateString = new Intl.DateTimeFormat('ja-JP', {
-              year: 'numeric',
-              month: '2-digit',
-              day: '2-digit'
-            }).format(pubDate).replace(/\//g, '.');
-            
-            const newsItem = document.createElement('div');
-            newsItem.className = 'news-item';
-
-            newsItem.innerHTML = `
-              <div class="news-date">${dateString}</div>
-              <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="news-title">${item.title}</a>
-            `;
-
-            feedContainer.appendChild(newsItem);
-          });
-        } else {
-          feedContainer.innerHTML = '<div class="text-muted small py-3">現在、新しいお知らせはありません。</div>';
-        }
+        if (!feedContainer || !data.items) return;
+        
+        feedContainer.innerHTML = ""; // 読み込み中... を消去
+        
+        // 最新の3件を表示
+        data.items.slice(0, 3).forEach(item => {
+          const date = new Date(item.pubDate);
+          const dateString = `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, '0')}.${String(date.getDate()).padStart(2, '0')}`;
+          
+          const html = `
+            <div class="news-item py-2 border-bottom d-flex flex-column flex-md-row gap-2">
+              <span class="text-muted small">${dateString}</span>
+              <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark fw-medium">
+                ${item.title}
+              </a>
+            </div>
+          `;
+          feedContainer.insertAdjacentHTML("beforeend", html);
+        });
       })
       .catch(error => {
-        console.error('RSS Fetch Error:', error);
-        feedContainer.innerHTML = '<div class="text-danger small py-3">お知らせの読み込みに失敗しました。</div>';
+        document.getElementById("note-rss-feed").innerHTML = '<div class="small text-muted">お知らせの読み込みに失敗しました。</div>';
       });
   }
 });
