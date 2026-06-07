@@ -1,0 +1,348 @@
+/* =========================================
+   CSS Variables & Base (クラシック・ナチュラル)
+========================================= */
+:root {
+  --primary-color: #4a3b32;
+  --accent-color: #b57a59;
+  --bg-color: #fbf9f6;
+  --text-color: #443c38;
+  --footer-bg: #3a3532;
+  --border-color: #e0d8d0;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  letter-spacing: 0.05em;
+  padding-bottom: 70px;
+}
+
+h1, h2, h3, h4, h5, h6, .serif {
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+/* =========================================
+   Utility & Component Classes
+========================================= */
+.container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.text-accent { color: var(--accent-color) !important; }
+.text-primary-custom { color: var(--primary-color) !important; }
+.text-gray-custom { color: #777 !important; }
+.text-line { color: #06c755 !important; }
+.text-note { color: #2cb696 !important; }
+.text-insta { color: #e1306c !important; }
+.text-xs { font-size: 0.75rem; }
+.btn-sm-text { font-size: 0.9rem; }
+
+.bg-half-white { background-color: rgba(255, 255, 255, 0.5); }
+.border-custom { border-color: var(--border-color) !important; }
+
+.section-padding { padding: 90px 0; }
+
+.section-news {
+  background-color: #fff;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.box-custom-rounded {
+  background-color: #fff;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px;
+}
+
+.table-custom {
+  border-color: var(--border-color) !important;
+}
+.table-custom th {
+  background-color: rgba(251, 249, 246, 0.8) !important;
+  font-weight: normal !important;
+}
+
+.site-footer {
+  background-color: var(--footer-bg);
+  color: #f9f9f9;
+}
+.footer-title { border-color: #666 !important; }
+.footer-info-box {
+  border-left: 2px solid var(--accent-color);
+  padding-left: 1.5rem;
+}
+.border-footer { border-color: #444 !important; }
+
+.footer-map-box {
+  border-radius: 8px;
+  border: 1px solid #555 !important;
+  background-color: #222;
+  overflow: hidden;
+}
+.footer-copyright {
+  background-color: #2a2624;
+  border-top: 1px solid #444 !important;
+}
+.mobile-menu-dropdown { top: 100%; }
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  display: inline-block;
+  padding: 10px 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+.section-title-wrapper {
+  text-align: center;
+}
+
+/* =========================================
+   Buttons
+========================================= */
+.btn-outline-custom {
+  color: var(--primary-color);
+  background-color: rgba(255, 255, 255, 0.8); 
+  transition: all 0.3s;
+  border-radius: 30px; 
+}
+.btn-outline-custom:hover {
+  background-color: rgba(255, 255, 255, 1); 
+  color: var(--primary-color);
+}
+
+.footer-btn {
+  border: 1px solid #666;
+  color: #fff;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+.footer-btn:hover {
+  color: #666;
+  background-color: rgba(255, 255, 255, 1); 
+}
+.footer-btn .serif {
+  color: inherit !important;
+}
+
+/* =========================================
+   Header
+========================================= */
+.header-wrapper {
+  background-color: rgba(234, 190, 25, 0.95);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* =========================================
+   Hero Section (LCP最適化仕様)
+========================================= */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* はみ出し防止 */
+}
+.hero-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 背景画像のように扱う */
+  z-index: 0;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(251, 249, 246, 0.7);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================
+   描画負荷軽減 (Content Visibility)
+========================================= */
+.philosophy-grid img,
+.item-card img,
+.map-container iframe {
+  content-visibility: auto;
+}
+
+/* =========================================
+   Philosophy Grid
+========================================= */
+.philosophy-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.philosophy-grid .main-img {
+  grid-column: 1 / 3;
+}
+.philosophy-grid img {
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+/* =========================================
+   当店の強み (カード風)
+========================================= */
+.strength-card {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 2rem;
+  height: 100%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+/* =========================================
+   Flow Section
+========================================= */
+.flow-step {
+  background: transparent;
+  padding: 1rem 0;
+  border-bottom: 1px dashed var(--border-color);
+}
+.flow-step:last-child {
+  border-bottom: none;
+}
+.flow-step-num {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  font-family: 'Noto Serif JP', serif;
+}
+.flow-store {
+  border: 3px double var(--border-color);
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 2.5rem;
+}
+.flow-visit {
+  border: 3px double var(--border-color);
+  border-radius: 12px;
+  background-color: #f5f2ed;
+  padding: 2.5rem;
+}
+
+/* =========================================
+   Google Map
+========================================= */
+.map-container {
+  width: 100%;
+  height: 500px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.map-container iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+}
+
+/* =========================================
+   Items Section
+========================================= */
+.item-card {
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  height: 100%;
+  transition: all 0.3s;
+}
+.item-card:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+.item-card img {
+  width: 120px; /* PC表示での基準サイズ */
+  max-width: 100%; /* スマホ表示で親要素からはみ出さないようにする */
+  height: auto; /* 画像の縦横比を維持する */
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .item-col:nth-child(n+10) { display: none; }
+  .item-col.show { display: block; }
+}
+
+/* =========================================
+   Mobile Bottom Nav (Fixed Footer)
+========================================= */
+.bottom-nav {
+  position: fixed;
+  bottom: 0; left: 0; width: 100%;
+  background: #fff;
+  border-top: 1px solid var(--border-color);
+  z-index: 1050;
+  display: flex;
+  padding: 10px 15px;
+}
+@media (min-width: 768px) {
+  .bottom-nav { display: none; }
+  body { padding-bottom: 0; }
+}
+
+/* =========================================
+   News Section
+========================================= */
+.news-list {
+  max-width: 100%;
+}
+.news-item {
+  display: flex;
+  align-items: baseline;
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed var(--border-color);
+}
+.news-item:last-child {
+  border-bottom: none;
+}
+.news-date {
+  min-width: 110px;
+  font-size: 0.85rem;
+  color: #888;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.news-title {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.news-title:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+@media (max-width: 767px) {
+  .news-item {
+    flex-direction: column;
+  }
+  .news-date {
+    margin-bottom: 0.25rem;
+  }
+  .news-title {
+    white-space: normal;
+  }
+}
