@@ -435,3 +435,24 @@ h1, h2, h3, h4, h5, h6, .serif {
 .tab-content > .tab-pane {
   background-color: transparent;
 }
+
+/* よくある質問のタブ切り替え スマホ最適化 */
+#faq .nav-tabs {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch;
+  border-bottom: 2px solid #dee2e6;
+  margin-bottom: 1.5rem;
+}
+
+#faq .nav-tabs .nav-item {
+  flex: 0 0 auto; /* 横幅を自動で維持し、縮ませない */
+  white-space: nowrap; /* 文字の折り返しを防ぐ */
+}
+
+#faq .nav-tabs .nav-link {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem; /* スマホ用に少し文字を小さく */
+}
