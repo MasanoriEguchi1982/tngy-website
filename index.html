@@ -64,6 +64,144 @@
   }
   </script>
 
+  <!-- ================= 構造化データ (FAQPage) ================= -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "査定だけでも大丈夫ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "もちろんです。まずは「これって価値あるのかな？」を知るだけでも大歓迎です。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "売るかまだ決めていないのですが…",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "問題ありません。査定額をご覧いただいてから、ゆっくりご検討ください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "査定したら断りづらくないですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ご安心ください。無理なお声がけはしておりません。ご納得いただいてからお決めください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "初めてで少し不安です…",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "初めてのお客様にも分かりやすく丁寧にご説明いたします。お気軽にお越しください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "こんなものでも見てもらえますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "「こんなの売れないかな？」と思うものも、意外とお値段が付くことがあります。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "古かったり汚れていても大丈夫ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "大丈夫です。状態に関わらず、一点ずつ丁寧に査定いたします。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "箱や保証書が無くても大丈夫ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "本体のみでも査定できる場合がありますのでご相談ください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "他店で断られたものでも見てもらえますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい、ぜひ一度お持ちください。お品によってご案内できる場合があります。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "値段が付かなかったら恥ずかしいです…",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "全く気になさらないでください。査定のみのお客様も多くいらっしゃいます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "少ない量でも行っていいですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "もちろんです。1点からでもお気軽にどうぞ。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "家の片付けで出てきたものでも大丈夫？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい。整理中のお品もお気軽にご相談ください。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "遺品整理や生前整理の相談もできますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "大丈夫です。ご家族のお気持ちに寄り添ってご相談を承ります。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "女性一人でも入りやすいですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "安心してご来店いただけるよう、話しやすい雰囲気づくりを心掛けています。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "査定時間はどれくらいですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "お品物によりますが、できるだけお待たせしないようご案内しています。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "値段の理由も教えてもらえますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "はい。できる限り分かりやすく査定内容をご説明します。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "駐車場はありますか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "駐車場のご用意はございませんが、お買取成立のお客様には駐車場代をサービスしております。詳しくはスタッフまでお気軽にご確認ください。"
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- ================= パフォーマンス最適化 (Preload & Preconnect) ================= -->
   <!-- メインビジュアルを最優先でFetch -->
   <link rel="preload" href="images/mainvisual.webp" as="image" fetchpriority="high">
@@ -108,7 +246,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="#faq" class="text-decoration-none text-dark">よくある質問</a>
         <a href="#company" class="text-decoration-none text-dark">会社について</a>
         <a href="https://note.com/tunaguya_2798" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark">
-          お知らせ <i class="fa-solid fa-arrow-up-right-from-square small text-muted"></i>
+          お知らせ <i class="fa-solid fa-arrow-up-right-from-square small text-muted" aria-hidden="true"></i>
         </a>
         <a href="https://forms.gle/x6pWkZsqKZZUqsto9" target="_blank" class="text-decoration-none text-dark">お問合せ</a>
       </nav>
@@ -116,13 +254,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="d-none d-md-flex flex-column align-items-end text-center">
         <span class="text-muted mb-1 mx-auto text-xs">営業時間：09:30〜17:00 不定休</span>
         <a href="tel:0466960481" class="btn btn-outline-custom px-4 py-1 text-decoration-none d-flex align-items-center" aria-label="電話をかける">
-          <i class="fa-solid fa-phone me-2 text-accent"></i>
+          <i class="fa-solid fa-phone me-2 text-accent" aria-hidden="true"></i>
           <span class="fs-5 serif">04-6696-0481</span>
         </a>
       </div>
 
       <button class="navbar-toggler d-lg-none border-0 fs-2 text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-label="メニューを開く">
-        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
       </button>
     </div>
     
@@ -161,8 +299,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section id="news" class="py-4 section-news">
       <div class="container-custom">
         <div class="d-flex align-items-baseline justify-content-between mb-3 border-bottom pb-2">
-          <h2 class="fs-5 serif mb-0 text-primary-custom"><i class="fa-regular fa-bell text-accent me-2"></i>お知らせ</h2>
-          <a href="https://note.com/tunaguya_2798" target="_blank" rel="noopener noreferrer" class="small text-muted text-decoration-none">一覧を見る <i class="fa-solid fa-angle-right"></i></a>
+          <h2 class="fs-5 serif mb-0 text-primary-custom"><i class="fa-regular fa-bell text-accent me-2" aria-hidden="true"></i>お知らせ</h2>
+          <a href="https://note.com/tunaguya_2798" target="_blank" rel="noopener noreferrer" class="small text-muted text-decoration-none">一覧を見る <i class="fa-solid fa-angle-right" aria-hidden="true"></i></a>
         </div>
         <div id="note-rss-feed" class="news-list px-2">
           <div class="text-center text-muted small py-3">お知らせを読み込み中...</div>
@@ -198,21 +336,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="row row-cols-1 row-cols-md-3 g-4 text-center mt-2">
           <div class="col">
             <div class="strength-card">
-              <i class="fa-solid fa-user-shield fs-1 text-accent mb-4"></i>
+              <i class="fa-solid fa-user-shield fs-1 text-accent mb-4" aria-hidden="true"></i>
               <h3 class="mb-3 fs-5 serif">プライバシー厳守</h3>
               <p class="text-muted text-start mb-0 small lh-lg">お客様の個人情報やお持ち込みの事実は、厳重に秘密をお守りいたします。安心してご来店ください。</p>
             </div>
           </div>
           <div class="col">
             <div class="strength-card">
-              <i class="fa-solid fa-box-open fs-1 text-accent mb-4"></i>
+              <i class="fa-solid fa-box-open fs-1 text-accent mb-4" aria-hidden="true"></i>
               <h3 class="mb-3 fs-5 serif">生前整理・遺品整理・お片付け</h3>
               <p class="text-muted text-start mb-0 small lh-lg">お片付けや実家整理・空き家整理に伴うお品物の整理も、専門家としてサポート。「捨てる前に査定してほしい」「これ売れる？」といった価値がわからない古い物も、丁寧に仕分け・無料査定いたします。</p>
             </div>
           </div>
           <div class="col">
             <div class="strength-card">
-              <i class="fa-regular fa-comments fs-1 text-accent mb-4"></i>
+              <i class="fa-regular fa-comments fs-1 text-accent mb-4" aria-hidden="true"></i>
               <h3 class="mb-3 fs-5 serif">ご相談からOK</h3>
               <p class="text-muted text-start mb-0 small lh-lg">「売るかわからないけれど価値を知りたい」といったご相談のみでも大歓迎です。お気軽にお立ち寄りください。</p>
             </div>
@@ -273,7 +411,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="mt-5 p-4 text-center box-custom-rounded">
-          <h3 class="mb-4 serif fs-4"><i class="fa-regular fa-clipboard text-accent me-2"></i>ご用意いただくもの</h3>
+          <h3 class="mb-4 serif fs-4"><i class="fa-regular fa-clipboard text-accent me-2" aria-hidden="true"></i>ご用意いただくもの</h3>
           <p class="fs-5 lh-lg mb-3">
             <span class="d-inline-block me-4">・ 本人確認資料 <span class="small text-muted">（運転免許証・マイナンバーカード等）</span></span>
             <span class="d-inline-block">・ 対象のお品物</span>
@@ -311,7 +449,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         
         <div class="text-center mt-5 d-md-none">
           <button id="readMoreBtn" class="btn btn-outline-custom px-5 py-2 bg-white" aria-expanded="false">
-            もっとみる <i class="fa-solid fa-chevron-down ms-1"></i>
+            もっとみる <i class="fa-solid fa-chevron-down ms-1" aria-hidden="true"></i>
           </button>
         </div>
 
@@ -572,28 +710,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
 
           <a href="tel:0466960481" class="btn w-100 py-3 mb-3 fs-4 footer-btn" aria-label="電話をかける">
-            <i class="fa-solid fa-phone me-2 text-accent"></i> <span class="serif">04-6696-0481</span>
+            <i class="fa-solid fa-phone me-2 text-accent" aria-hidden="true"></i> <span class="serif">04-6696-0481</span>
           </a>
           
           <div class="row g-3">
             <div class="col-sm-6">
               <a href="https://line.me/R/ti/p/@423qtcnf" target="_blank" rel="noopener noreferrer" class="btn w-100 py-3 footer-btn">
-                <i class="fa-brands fa-line me-1 text-line"></i> LINEで相談する
+                <i class="fa-brands fa-line me-1 text-line" aria-hidden="true"></i> LINEで相談する
               </a>
             </div>
             <div class="col-sm-6">
               <a href="https://forms.gle/x6pWkZsqKZZUqsto9" target="_blank" class="btn w-100 py-3 footer-btn">
-                <i class="fa-regular fa-envelope me-1"></i> お問合せフォーム
+                <i class="fa-regular fa-envelope me-1" aria-hidden="true"></i> お問合せフォーム
               </a>
             </div>
           </div>
 
           <div class="d-flex justify-content-center justify-content-lg-start gap-3 mt-4 pt-4 border-top border-footer">
             <a href="https://note.com/tunaguya_2798" target="_blank" rel="noopener noreferrer" class="btn px-4 footer-btn btn-sm-text">
-              <i class="fa-solid fa-book-open me-1 text-note"></i> 最新情報(note)
+              <i class="fa-solid fa-book-open me-1 text-note" aria-hidden="true"></i> 最新情報(note)
             </a>
             <a href="https://www.instagram.com/tngy2798" target="_blank" rel="noopener noreferrer" class="btn px-4 footer-btn btn-sm-text">
-              <i class="fa-brands fa-instagram me-1 text-insta"></i> 公式Instagram
+              <i class="fa-brands fa-instagram me-1 text-insta" aria-hidden="true"></i> 公式Instagram
             </a>
           </div>
         </div>
@@ -614,7 +752,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- ================= スマホ用固定フッター ================= -->
   <div class="bottom-nav">
     <a href="tel:0466960481" class="btn w-100 py-2 fs-5 d-flex align-items-center justify-content-center" aria-label="電話をかける">
-      <i class="fa-solid fa-phone me-2"></i> 電話で相談 (04-6696-0481)
+      <i class="fa-solid fa-phone me-2" aria-hidden="true"></i> 電話で相談 (04-6696-0481)
     </a>
   </div>
 

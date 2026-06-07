@@ -25,12 +25,13 @@ document.addEventListener('DOMContentLoaded', function() {
           const items = data.items.slice(0, 3); // 最新3件を取得
 
           items.forEach(item => {
-            const pubDate = new Date(item.pubDate.replace(/-/g, '/'));
-            const year = pubDate.getFullYear();
-            const month = String(pubDate.getMonth() + 1).padStart(2, '0');
-            const day = String(pubDate.getDate()).padStart(2, '0');
-            const dateString = `${year}.${month}.${day}`;
-
+            const pubDate = new Date(item.pubDate);
+            const dateString = new Intl.DateTimeFormat('ja-JP', {
+              year: 'numeric',
+              month: '2-digit',
+              day: '2-digit'
+            }).format(pubDate).replace(/\//g, '.');
+            
             const newsItem = document.createElement('div');
             newsItem.className = 'news-item';
 
