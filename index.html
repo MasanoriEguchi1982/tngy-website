@@ -215,16 +215,16 @@
   <!-- 3. クリティカルCSSのインライン化 (ファーストビューのレンダリングブロック解消) -->
   <style>
     /* 基本的なリセットとフォント設定 */
-    body{font-family:"Noto Sans JP",sans-serif;background-color:#fff}
-    .serif{font-family:"Noto Serif JP",serif}
+    body{font-family:'Noto Serif JP',serif;background-color:#fbf9f6;color:#443c38}
+    h1,h2,h3,h4,h5,h6,.serif{font-family:'Noto Serif JP',serif;font-weight:500;color:#4a3b32}
     /* ヘッダーとヒーローセクションの最小限のスタイル */
-    .header-wrapper{background-color:rgba(255,255,255,.9);backdrop-filter:blur(5px);position:sticky;top:0;z-index:1030}
-    .container-custom{max-width:1140px;margin-left:auto;margin-right:auto;padding-left:15px;padding-right:15px}
-    .hero-section{position:relative;height:60vh;min-height:450px;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;overflow:hidden}
-    .hero-bg-img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:-2}
-    .hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.3);z-index:-1}
-    .hero-content{position:relative;z-index:1}
-    .display-4{font-size:calc(1.475rem + 2.7vw);font-weight:300;line-height:1.2}
+    .header-wrapper{background-color:rgba(234,190,25,0.95);border-bottom:1px solid #e0d8d0;position:sticky;top:0;z-index:1030}
+    .container-custom{max-width:1200px;margin:0 auto;padding:0 15px}
+    .hero-section{position:relative;width:100%;height:70vh;min-height:450px;display:flex;align-items:center;overflow:hidden}
+    .hero-bg-img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0}
+    .hero-overlay{position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(251,249,246,0.7);z-index:1}
+    .hero-content{position:relative;z-index:2;text-align:center}
+    .display-4{font-size:calc(1.475rem + 2.7vw);font-weight:500;line-height:1.2}
     @media(min-width:1200px){.display-4{font-size:4rem}}
     .fs-4{font-size:calc(1.275rem + .3vw)}
     @media(min-width:1200px){.fs-4{font-size:1.5rem}}
@@ -311,10 +311,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <img src="images/mainvisual.webp" alt="メインビジュアル" class="hero-bg-img" fetchpriority="high" decoding="sync" width="1920" height="1080" srcset="images/mainvisual-sm.webp 768w, images/mainvisual.webp 1920w" sizes="100vw">
       <div class="hero-overlay"></div>
       <div class="container-custom hero-content text-center">
-        <h1 class="display-4 mb-4 serif"><span class="fs-4 fw-normal d-block mt-2">藤沢・辻堂の買取専門店</span>つなぐ屋</h1>
+        <h1 class="display-4 mb-4 serif">藤沢・辻堂の買取専門店 つなぐ屋</h1>
         <p class="fs-4 mb-3">
-          辻堂駅前・藤沢エリア密着<br>
-          女性目線のよりそう買取専門店
+          大切なお品物を、未来へつなぐ。<br>
+          <span class="fs-5">辻堂駅前・藤沢エリア密着の女性鑑定士がいるお店</span>
         </p>
         <p class="fs-5 fw-bold">相談無料・予約不要・即日査定</p>
       </div>
@@ -325,8 +325,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="container-custom">
         <p class="mb-0 fw-bold fs-5 serif text-white">
           <i class="fa-solid fa-gift me-2" aria-hidden="true"></i>
-          2026年6月14日(日) NEW OPEN！
-          <span class="d-none d-md-inline">買取つなぐ屋 湘南辻堂店 グランドオープン</span>
+          NEW OPEN！
+          <span class="d-none d-md-inline ms-2">買取つなぐ屋 湘南辻堂店 グランドオープン</span>
         </p>
       </div>
     </section>
@@ -423,7 +423,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="strength-card">
               <i class="fa-solid fa-box-open fs-1 text-accent mb-4" aria-hidden="true"></i>
               <h3 class="mb-3 fs-5 serif">生前整理・遺品整理・お片付け</h3>
-              <p class="text-muted text-start mb-0 small lh-lg">お片付けや実家整理・空き家整理に伴うお品物の整理も、専門家としてサポート。「捨てる前に査定してほしい」「これ売れる？」といった価値がわからない古い物も、丁寧に仕分け・無料査定いたします。<a href="/seiri/" class="d-block mt-2 text-decoration-none">遺品整理・生前整理について詳しく <i class="fa-solid fa-angle-right small" aria-hidden="true"></i></a></p>
+              <p class="text-muted text-start mb-0 small lh-lg">お片付けや実家整理・空き家整理に伴うお品物の整理も、専門家としてサポート。「捨てる前に査定してほしい」「これ売れる？」といった価値がわからない古い物も、丁寧に仕分け・無料査定いたします。</p>
             </div>
           </div>
           <div class="col">
@@ -491,7 +491,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="flow-step-num text-gray-custom">2.</span>
                 <div>
                   <div class="fs-5">鑑定士がご自宅へ訪問</div>
-                  <p class="small text-muted mt-1 mb-0"><strong class="text-accent">お客様による事前の準備は不要です。</strong><a href="/seiri/" class="text-decoration-none">遺品整理</a>など、押し入れやタンスの中がそのままでも構いません。</p>
+                  <p class="small text-muted mt-1 mb-0"><strong class="text-accent">お客様による事前の準備は不要です。</strong>遺品整理など、押し入れやタンスの中がそのままでも構いません。</p>
                 </div>
               </div>
               <div class="flow-step d-flex align-items-start">
@@ -729,7 +729,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header" id="faq-heading-12"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-12" aria-expanded="false" aria-controls="faq-collapse-12">Q. 遺品整理や生前整理の相談もできますか？</button></h3>
-                <div id="faq-collapse-12" class="accordion-collapse collapse" aria-labelledby="faq-heading-12" data-bs-parent="#faqAccordionCleanup"><div class="accordion-body">A. 大丈夫です。つなぐ屋では、遺品整理士の資格を持つ専門スタッフが、ご家族のお気持ちに寄り添いながらお品物の整理・買取を承ります。大切な想い出をゴミにせず、次の方へ丁寧につなぐお手伝いをいたします。<a href="/seiri/" class="d-block mt-2 text-decoration-none">遺品整理・生前整理サービスの詳細はこちら <i class="fa-solid fa-angle-right small" aria-hidden="true"></i></a></div></div>
+                <div id="faq-collapse-12" class="accordion-collapse collapse" aria-labelledby="faq-heading-12" data-bs-parent="#faqAccordionCleanup"><div class="accordion-body">A. 大丈夫です。つなぐ屋では、遺品整理士の資格を持つ専門スタッフが、ご家族のお気持ちに寄り添いながらお品物の整理・買取を承ります。大切な想い出をゴミにせず、次の方へ丁寧につなぐお手伝いをいたします。</div></div>
               </div>
               <div class="accordion-item">
                 <h3 class="accordion-header" id="faq-heading-13"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-13" aria-expanded="false" aria-controls="faq-collapse-13">Q. 女性一人でも入りやすいですか？</button></h3>
@@ -780,7 +780,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </tr>
                 <tr>
                   <th class="text-center">設立</th>
-                  <td class="px-4 py-3">2026年6月14日</td>
+                  <td class="px-4 py-3">2024年6月14日</td>
                 </tr>
                 <tr>
                   <th class="text-center">古物営業許可</th>
@@ -853,7 +853,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     
     <div class="py-4 text-center border-top footer-copyright">
-      <small class="text-white">Copyright &copy; 2026 Tsunaguya / SWANEL Corp. All rights reserved.</small>
+      <small class="text-white">Copyright &copy; 2024 Tsunaguya / SWANEL Corp. All rights reserved.</small>
     </div>
   </footer>
 
