@@ -11,6 +11,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // 夏季休業バナーは8月6日以降に自動で非表示
+  const summerClosureBanner = document.getElementById('summer-closure-banner');
+  if (summerClosureBanner) {
+    const bannerEndDate = new Date('2026-08-06T00:00:00+09:00');
+    const now = new Date();
+
+    if (now >= bannerEndDate) {
+      summerClosureBanner.remove();
+    }
+  }
+
   // NoteのRSSフィードを取得してお知らせ欄に表示
   const noteRssUrl = 'https://note.com/tunaguya_2798/rss';
   const apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(noteRssUrl);
