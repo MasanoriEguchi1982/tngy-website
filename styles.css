@@ -364,6 +364,7 @@ h1, h2, h3, h4, h5, h6, .serif {
   border-top: 1px solid var(--border-color);
   z-index: 1050;
   display: flex;
+  gap: 8px;
   padding: 10px 15px;
 }
 @media (min-width: 768px) {
@@ -371,14 +372,46 @@ h1, h2, h3, h4, h5, h6, .serif {
   body { padding-bottom: 0; }
 }
 .bottom-nav a {
+  flex: 1 1 0;
   background-color: #eabe19; /* 基調色の黄色 */
   color: var(--primary-color);
   font-weight: bold;
   border-radius: 6px;
   border: none;
+  min-width: 0;
+}
+.bottom-nav a.line-cta {
+  background-color: #06c755;
+  color: #fff;
 }
 .bottom-nav a i {
   color: #fff;
+}
+
+.desktop-line-cta {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1040;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 30px;
+  background-color: #06c755;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.desktop-line-cta:hover {
+  color: #fff;
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+@media (max-width: 767px) {
+  .desktop-line-cta { display: none; }
 }
 
 /* =========================================
