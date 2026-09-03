@@ -26,8 +26,21 @@ document.addEventListener('DOMContentLoaded', function() {
   const noteRssUrl = 'https://note.com/tunaguya_2798/rss';
   const apiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(noteRssUrl);
   const feedContainer = document.getElementById('note-rss-feed');
+  const noteThumbnailMap = {
+    'https://note.com/tunaguya_2798/n/n997f18a39955': 'https://assets.st-note.com/production/uploads/images/303028182/rectangle_large_type_2_a04c3bc59e25237380cbf4986b081ebf.png?fit=bounds&quality=85&width=1280',
+    'https://note.com/tunaguya_2798/n/naca8fbbc9b11': 'https://assets.st-note.com/production/uploads/images/302679665/rectangle_large_type_2_1b513d80fdc3020f882c3ce4b69b3fd6.png?fit=bounds&quality=85&width=1280',
+    'https://note.com/tunaguya_2798/n/n5ed8230a3d02': 'https://assets.st-note.com/production/uploads/images/294555318/rectangle_large_type_2_7ba142c4e059a284299b28808867401d.png?fit=bounds&quality=85&width=1280'
+  };
 
   if (feedContainer) {
+    const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, character => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      "'": '&#39;',
+      '"': '&quot;'
+    }[character]));
+
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => {
@@ -39,14 +52,20 @@ document.addEventListener('DOMContentLoaded', function() {
         data.items.slice(0, 3).forEach(item => {
           const date = new Date(item.pubDate);
           const dateString = `${date.getFullYear()}.${String(date.getMonth() + 1).padStart(2, '0')}.${String(date.getDate()).padStart(2, '0')}`;
+          const thumbnailUrl = noteThumbnailMap[item.link] || item.thumbnail || item.enclosure?.link || 'images/ogp.png';
           
           const html = `
-            <div class="news-item py-2 border-bottom d-flex flex-column flex-md-row gap-2">
-              <span class="text-muted small">${dateString}</span>
-              <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-dark fw-medium">
-                ${item.title}
+            <article class="news-card">
+              <a href="${escapeHtml(item.link)}" target="_blank" rel="noopener noreferrer" class="news-card-link">
+                <div class="news-card-thumbnail">
+                  <img src="${escapeHtml(thumbnailUrl)}" alt="${escapeHtml(item.title)}" loading="lazy" decoding="async">
+                </div>
+                <div class="news-card-body">
+                  <time class="news-card-date" datetime="${escapeHtml(item.pubDate)}">${dateString}</time>
+                  <h3 class="news-card-title">${escapeHtml(item.title)}</h3>
+                </div>
               </a>
-            </div>
+            </article>
           `;
           feedContainer.insertAdjacentHTML("beforeend", html);
         });

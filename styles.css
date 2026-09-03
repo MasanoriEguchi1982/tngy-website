@@ -420,6 +420,71 @@ h1, h2, h3, h4, h5, h6, .serif {
 .news-list {
   max-width: 100%;
 }
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.news-card {
+  min-width: 0;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.news-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.news-card-link {
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+.news-card-thumbnail {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: #f4f2ef;
+}
+.news-card-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.news-card-body {
+  padding: 1rem 1.1rem 1.2rem;
+}
+.news-card-date {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: #888;
+  font-size: 0.8rem;
+}
+.news-card-title {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+@media (max-width: 767px) {
+  .news-list {
+    grid-template-columns: 1fr;
+  }
+  .news-card-link {
+    display: flex;
+    align-items: stretch;
+  }
+  .news-card-thumbnail {
+    flex: 0 0 25%;
+    aspect-ratio: 1 / 1;
+  }
+  .news-card-body {
+    flex: 1 1 75%;
+    min-width: 0;
+  }
+}
 
 /* =========================================
    FAQ Accordion
